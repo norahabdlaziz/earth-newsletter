@@ -1,0 +1,181 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--color-background-tertiary)}
+  .page{font-family:'Nunito',sans-serif;max-width:860px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;border:2px solid #c8e6c9}
+  .hero{background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 50%,#388e3c 100%);padding:28px 32px;display:flex;align-items:center;gap:20px}
+  .hero-globe{width:90px;height:90px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#1565c0 0%,#0d47a1 60%,#01579b 100%);flex-shrink:0;position:relative;overflow:hidden;border:4px solid rgba(255,255,255,0.4)}
+  .hero-globe::before{content:'';position:absolute;top:10px;left:12px;width:40px;height:28px;background:#2e7d32;border-radius:50% 40% 50% 30%;opacity:0.9}
+  .hero-globe::after{content:'';position:absolute;top:30px;right:8px;width:26px;height:40px;background:#388e3c;border-radius:40% 50% 30% 50%;opacity:0.9}
+  .hero-text h1{font-family:'Fredoka One',cursive;font-size:32px;color:#fff;line-height:1.1}
+  .hero-text p{font-size:14px;color:#a5d6a7;margin-top:4px}
+  .hero-trees{display:flex;gap:10px;margin-left:auto}
+  .tree-svg{width:60px;height:70px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:3px solid #e8f5e9}
+  .fact{padding:16px 14px;text-align:center;border-right:2px solid #e8f5e9}
+  .fact:last-child{border-right:none}
+  .fact-icon{font-size:28px;display:block;margin-bottom:6px}
+  .fact h3{font-size:12px;font-weight:800;color:#1b5e20;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+  .fact p{font-size:11px;color:#555;line-height:1.4}
+  .fact.blue{background:#e3f2fd}.fact.blue h3{color:#0d47a1}
+  .fact.yellow{background:#fffde7}.fact.yellow h3{color:#e65100}
+  .fact.green{background:#e8f5e9}
+  .body{padding:24px 28px;display:flex;flex-direction:column;gap:20px}
+  .sec-head{border-radius:12px;padding:10px 18px;display:flex;align-items:center;gap:10px}
+  .sec-head h2{font-family:'Fredoka One',cursive;font-size:20px;color:#fff}
+  .sh-green{background:#2e7d32}.sh-blue{background:#1565c0}.sh-red{background:#c62828}.sh-orange{background:#e65100}.sh-yellow{background:#f9a825}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{border-radius:12px;padding:16px;border:2px solid}
+  .card-green{background:#e8f5e9;border-color:#a5d6a7}
+  .card-blue{background:#e3f2fd;border-color:#90caf9}
+  .card-orange{background:#fff3e0;border-color:#ffcc80}
+  .card-yellow{background:#fffde7;border-color:#fff176}
+  .card h3{font-size:13px;font-weight:800;margin-bottom:8px}
+  .card-green h3{color:#1b5e20}.card-blue h3{color:#0d47a1}.card-orange h3{color:#e65100}
+  ul.fun{list-style:none;display:flex;flex-direction:column;gap:5px}
+  ul.fun li{font-size:12px;color:#333;line-height:1.4;display:flex;gap:6px;align-items:flex-start}
+  ul.fun li::before{content:'✦';font-size:10px;margin-top:2px;flex-shrink:0}
+  .card-green ul.fun li::before{color:#2e7d32}.card-blue ul.fun li::before{color:#1565c0}.card-orange ul.fun li::before{color:#e65100}
+  .illus-row{display:flex;align-items:center;gap:14px}
+  .illus-box{flex-shrink:0;width:80px;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .poll-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .poll-card{border-radius:10px;padding:12px;border:2px solid;text-align:center}
+  .poll-card .icon{font-size:26px;display:block;margin-bottom:6px}
+  .poll-card h4{font-size:12px;font-weight:800;margin-bottom:4px}
+  .poll-card p{font-size:11px;line-height:1.4;color:#444}
+  .pledge{background:linear-gradient(135deg,#fffde7,#fff9c4);border:3px dashed #f9a825;border-radius:16px;padding:20px;text-align:center}
+  .pledge h2{font-family:'Fredoka One',cursive;font-size:22px;color:#e65100;margin-bottom:10px}
+  .pledge p{font-size:13px;color:#4e342e;font-style:italic;line-height:1.6;margin-bottom:14px}
+  .pledge-fields{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .pledge-field-box{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .pledge-field-label{font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+  .pledge-field-value{font-family:'Fredoka One',cursive;font-size:16px;color:#2e7d32;border-bottom:2px solid #f9a825;padding:2px 12px}
+  .footer{background:#e8f5e9;padding:10px 20px;text-align:center;font-size:11px;color:#555;border-top:2px solid #c8e6c9}
+</style>
+
+<div class="page">
+  <div class="hero">
+    <div class="hero-globe"></div>
+    <div class="hero-text">
+      <h1>Our Planet Needs Us!</h1>
+      <p>Environment &amp; Earth Newsletter &bull; Core Subjects Project 2026</p>
+    </div>
+    <div class="hero-trees">
+      <svg class="tree-svg" viewBox="0 0 60 70"><ellipse cx="30" cy="22" rx="24" ry="20" fill="#388e3c"/><ellipse cx="30" cy="16" rx="20" ry="17" fill="#43a047"/><ellipse cx="30" cy="10" rx="16" ry="14" fill="#66bb6a"/><rect x="24" y="40" width="12" height="20" fill="#6d4c41"/></svg>
+      <svg class="tree-svg" viewBox="0 0 60 70"><ellipse cx="30" cy="24" rx="22" ry="18" fill="#2e7d32"/><ellipse cx="30" cy="16" rx="18" ry="15" fill="#388e3c"/><ellipse cx="30" cy="9" rx="14" ry="12" fill="#4caf50"/><rect x="25" y="40" width="10" height="20" fill="#795548"/></svg>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="fact green"><span class="fact-icon">♻️</span><h3>Recycling Rocks!</h3><p>One aluminium can saves enough energy to run a TV for 3 hours!</p></div>
+    <div class="fact blue"><span class="fact-icon">💧</span><h3>Water is Life!</h3><p>Only 3% of Earth's water is fresh water — don't waste a single drop!</p></div>
+    <div class="fact yellow"><span class="fact-icon">🌳</span><h3>Trees are Heroes!</h3><p>One tree absorbs 22 kg of CO₂ every year and gives us oxygen!</p></div>
+  </div>
+
+  <div class="body">
+
+    <div class="sec-head sh-green"><span style="font-size:22px">♻️</span><h2>Recycling Tips</h2></div>
+    <div class="illus-row">
+      <div class="illus-box">
+        <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="40" cy="40" r="38" fill="#c8e6c9"/><g transform="translate(40,40)"><path d="M0,-28 A28,28 0 0,1 24.2,14" fill="none" stroke="#2e7d32" stroke-width="9" stroke-linecap="round"/><polygon points="24.2,14 15,2 34,4" fill="#2e7d32"/><path d="M24.2,14 A28,28 0 0,1 -24.2,14" fill="none" stroke="#388e3c" stroke-width="9" stroke-linecap="round"/><polygon points="-24.2,14 -13,26 -32,22" fill="#388e3c"/><path d="M-24.2,14 A28,28 0 0,1 0,-28" fill="none" stroke="#66bb6a" stroke-width="9" stroke-linecap="round"/><polygon points="0,-28 10,-17 -10,-17" fill="#66bb6a"/></g></svg>
+        <span style="font-size:9px;color:#2e7d32;font-weight:700">Recycle!</span>
+      </div>
+      <div class="card card-green" style="flex:1">
+        <h3>♻️ How to Recycle</h3>
+        <ul class="fun">
+          <li>Sort your trash — paper, plastic, glass &amp; metal go in separate bins</li>
+          <li>Use reusable bags instead of single-use plastic bags</li>
+          <li>Donate old clothes and toys instead of throwing them away</li>
+          <li>Turn old jars into pencil holders or plant pots</li>
+          <li>Use BOTH sides of paper before recycling it</li>
+          <li>Compost fruit peels to make natural fertiliser for plants!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head sh-blue"><span style="font-size:22px">💧</span><h2>Save Water Ideas</h2></div>
+    <div class="illus-row">
+      <div class="card card-blue" style="flex:1">
+        <h3>💧 Easy Ways to Save Water</h3>
+        <ul class="fun">
+          <li>Turn off the tap while brushing your teeth — saves 8 litres!</li>
+          <li>Take shorter showers — 5 minutes is enough!</li>
+          <li>Fix dripping taps — one drip wastes thousands of litres a year!</li>
+          <li>Water plants in the morning or evening, not at midday</li>
+          <li>Collect rainwater to water your garden</li>
+          <li>Use a bucket instead of a hose when washing the car</li>
+        </ul>
+      </div>
+      <div class="illus-box">
+        <svg viewBox="0 0 80 90" width="66" height="76"><circle cx="40" cy="50" r="32" fill="#90caf9"/><path d="M40,8 L15,52 Q15,82 40,82 Q65,82 65,52 Z" fill="#1565c0"/><path d="M40,8 L28,45 Q28,68 40,68 Q52,68 52,45 Z" fill="#1976d2" opacity="0.5"/><ellipse cx="31" cy="38" rx="6" ry="9" fill="white" opacity="0.35" transform="rotate(-20,31,38)"/></svg>
+        <span style="font-size:9px;color:#1565c0;font-weight:700">Save Water!</span>
+      </div>
+    </div>
+
+    <div class="sec-head sh-red"><span style="font-size:22px">🏭</span><h2>Pollution Facts You Should Know</h2></div>
+    <div class="poll-grid">
+      <div class="poll-card" style="background:#ffebee;border-color:#ef9a9a"><span class="icon">🌬️</span><h4 style="color:#b71c1c">Air Pollution</h4><p>Over 7 million people get sick every year because of air pollution from cars and factories!</p></div>
+      <div class="poll-card" style="background:#e3f2fd;border-color:#90caf9"><span class="icon">🌊</span><h4 style="color:#0d47a1">Ocean Pollution</h4><p>8 million tonnes of plastic enter our oceans every year — sea turtles and dolphins are badly hurt!</p></div>
+      <div class="poll-card" style="background:#f3e5f5;border-color:#ce93d8"><span class="icon">🌱</span><h4 style="color:#6a1b9a">Soil Pollution</h4><p>Factory chemicals poison the ground and damage the crops that we eat every day!</p></div>
+    </div>
+
+    <div class="sec-head sh-orange"><span style="font-size:22px">🧒</span><h2>How Kids Can Help the Planet!</h2></div>
+    <div class="two-col">
+      <div class="card card-orange">
+        <h3>🏫 At School</h3>
+        <ul class="fun">
+          <li>Switch off lights when leaving the classroom</li>
+          <li>Use both sides of paper for notes and drawings</li>
+          <li>Start a recycling corner in your class!</li>
+          <li>Plant trees or flowers in the school garden</li>
+          <li>Walk or cycle to school when possible</li>
+        </ul>
+      </div>
+      <div class="card card-green">
+        <h3>🏠 At Home</h3>
+        <ul class="fun">
+          <li>Remind your family to recycle and not litter</li>
+          <li>Unplug chargers when not in use</li>
+          <li>Choose a reusable water bottle</li>
+          <li>Eat more veggies and fruits — they help the planet!</li>
+          <li>Teach younger siblings about protecting Earth</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-yellow" style="background:#fffde7;border-color:#fff176;border-width:2px">
+      <h3 style="color:#e65100;font-size:15px;margin-bottom:10px">⚡ Did You Know?</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:rgba(255,255,255,0.6);border-radius:8px;padding:10px;font-size:12px;color:#4e342e;line-height:1.5"><strong style="display:block;color:#e65100;margin-bottom:3px">🌳 Trees &amp; CO₂</strong>If every student planted just ONE tree, we'd remove hundreds of kilograms of carbon dioxide from the air!</div>
+        <div style="background:rgba(255,255,255,0.6);border-radius:8px;padding:10px;font-size:12px;color:#4e342e;line-height:1.5"><strong style="display:block;color:#e65100;margin-bottom:3px">🐝 Bees &amp; Food</strong>Bees pollinate 1/3 of all the food we eat. Protecting flowers keeps bees alive — and keeps us fed!</div>
+      </div>
+    </div>
+
+    <!-- PLEDGE -->
+    <div class="pledge">
+      <div style="margin-bottom:8px">
+        <svg viewBox="0 0 40 38" width="32" height="30" style="display:inline-block;vertical-align:middle"><polygon points="20,2 24.5,13.5 37,13.5 27,21 30.5,33 20,26 9.5,33 13,21 3,13.5 15.5,13.5" fill="#f9a825"/></svg>
+        <span style="font-family:'Fredoka One',cursive;font-size:20px;color:#e65100;vertical-align:middle"> MY EARTH PLEDGE </span>
+        <svg viewBox="0 0 40 38" width="32" height="30" style="display:inline-block;vertical-align:middle"><polygon points="20,2 24.5,13.5 37,13.5 27,21 30.5,33 20,26 9.5,33 13,21 3,13.5 15.5,13.5" fill="#f9a825"/></svg>
+      </div>
+      <p>"I promise to recycle, save water, protect animals,<br>and love our beautiful planet Earth every single day!"</p>
+      <div class="pledge-fields">
+        <div class="pledge-field-box">
+          <span class="pledge-field-label">Name</span>
+          <span class="pledge-field-value">Musaad Alyaqoot</span>
+        </div>
+        <div class="pledge-field-box">
+          <span class="pledge-field-label">Class</span>
+          <span class="pledge-field-value">4A</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;padding:4px 0 8px">
+      <span style="font-family:'Fredoka One',cursive;font-size:18px;color:#2e7d32">Together, every small action makes a BIG difference! Start TODAY! 🌍💚</span>
+    </div>
+
+  </div>
+  <div class="footer">AlMotaqadimah International School &nbsp;|&nbsp; AlNarjis Branch for Boys &nbsp;|&nbsp; Core Subjects Project &bull; 2nd Semester 2026</div>
+</div>
